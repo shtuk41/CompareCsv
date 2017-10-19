@@ -147,7 +147,7 @@ namespace CompareCsv
             return true;
         }
 
-        private bool SortFile(string name, string [] columns)
+        private bool SortFile(string name, string[] columns)
         {
             List<string[]> data = null;
             string[] headers = null;
@@ -203,7 +203,7 @@ namespace CompareCsv
                 {
                     return false;
                 }
-               
+
             }
 
             if (data != null && data.Count > 0 && headers != null && headers.Length > 0)
@@ -212,7 +212,7 @@ namespace CompareCsv
                 {
                     foreach (var h in headers)
                     {
-                            file.Write(h + ",");
+                        file.Write(h + ",");
                     }
 
                     file.Write("\n");
@@ -266,7 +266,7 @@ namespace CompareCsv
                         using (System.IO.StreamWriter fileOut = new System.IO.StreamWriter(newFileName))
                         {
                             fileOut.Write(lineOfText1);
-                            fileOut.Write(",,,,,,");
+                            fileOut.Write(",,,");
                             fileOut.Write(lineOfText2 + "\n");
 
                             lineOfText1 = file1.ReadLine();
@@ -277,7 +277,7 @@ namespace CompareCsv
                                 if (lineOfText1 != null && lineOfText2 != null)
                                 {
                                     fileOut.Write(lineOfText1);
-                                    fileOut.Write(",,,,");
+                                    fileOut.Write(",,,");
                                     fileOut.Write(lineOfText2);
                                     fileOut.Write("\n");
 
@@ -300,8 +300,6 @@ namespace CompareCsv
                                     fileOut.Write(lineOfText2 + "\n");
                                     lineOfText2 = file2.ReadLine();
                                 }
-
-
                             }
                         }
 

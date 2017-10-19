@@ -29,10 +29,13 @@ namespace CompareCsv
   
             InitializeComponent();
 
-            textBoxFile1.Text = 
-            modelView.File1 = @"C:\Users\Aleksander\Desktop\Projects\CompareCsv\CompareCsv\File1.csv";
+            textBoxFile1.Text =
+            modelView.File1 = @"C:\Users\u7ashtuk\Desktop\ITK Test Demo Server\Test1\Tunnel A\Working 2\";
             textBoxFile2.Text =
-            modelView.File2 = @"C:\Users\Aleksander\Desktop\Projects\CompareCsv\CompareCsv\File2.csv";
+            modelView.File2 = @"C:\Users\u7ashtuk\Desktop\ITK Test Demo Server\Test1\Tunnel A\Working 9\";
+
+            textBoxSortOn.Text =
+            modelView.SortOptions = " Field of View, Location Description, Defect Type/Property";
         }
 
         private void textBoxFile1_TextChanged(object sender, TextChangedEventArgs e)
